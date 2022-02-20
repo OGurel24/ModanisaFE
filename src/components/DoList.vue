@@ -5,10 +5,9 @@
     <input type="submit" id="submit" @click="addItem">
     <br><br>
     <ol>
-      <li v-for="item in items" :key="item">{{ item }}</li>
+      <li class="item" v-for="item in items" :key="item">{{ item }}</li>
     </ol>
   </div>
-
 </template>
 
 <script>
