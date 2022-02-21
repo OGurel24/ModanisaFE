@@ -11,6 +11,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "DoList",
   data() {
@@ -20,10 +22,19 @@ export default {
     }
   },
   methods: {
-    addItem() {
-      this.items.push(this.item)
+    async addItem() {
+      await axios.put("http://localhost:8081", this.item)
       this.item = ""
+      await this.fetchData()
+    },
+    async fetchData() {
+      let response = await axios.get("http://localhost:8081")
+      this.items = response.data
     }
+  },
+
+  async beforeMount() {
+    await this.fetchData()
   }
 }
 </script>
