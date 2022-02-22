@@ -7,14 +7,17 @@
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:pact": "vue-cli-service test:unit pacts/"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "flush-promises": "^1.0.2",
+    "jest-pact": "^0.9.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@pact-foundation/pact": "^9.17.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-unit-jest": "~4.5.0",
