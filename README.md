@@ -4,7 +4,7 @@ It is the frontend of the assigment project, vue front end of the do list
 ## Project setup (Dockerized)
 https://hub.docker.com/r/onurgurel24/frontend
 
-After pulling the image run given command (pelase DO NOT change ports)
+After pulling the image run given command (please DO NOT change ports)
 ```
 docker run -d -p 8080:80 onurgurel24/frontend
 ```
