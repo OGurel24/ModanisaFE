@@ -1,0 +1,29 @@
+{
+  "consumer": {
+    "name": "Frontend"
+  },
+  "provider": {
+    "name": "Backend"
+  },
+  "interactions": [
+    {
+      "description": "a request not empty for item list",
+      "providerState": "Get item list successfully",
+      "request": {
+        "method": "GET",
+        "path": "/"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=UTF-8"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}
