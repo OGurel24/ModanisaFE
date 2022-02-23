@@ -23,9 +23,9 @@ export default {
   },
   methods: {
     async addItem() {
+      this.items.push(this.item)
       await axios.put("http://localhost:8081", this.item)
       this.item = ""
-      await this.fetchData()
     },
     async fetchData() {
       let response = await axios.get("http://localhost:8081")

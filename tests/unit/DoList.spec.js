@@ -1,5 +1,6 @@
 import {mount} from '@vue/test-utils'
 import DoList from "../../src/components/DoList";
+import flushPromises from "flush-promises";
 
 it('Sanity Test', () => {
 })
@@ -55,12 +56,12 @@ describe("DoList.vue", () => {
 
         await textInput.setValue(newItemContent)
         await submitButton.trigger("click")
+        await flushPromises()
 
-        const items = wrapper.findAll("li")
+        const items = await wrapper.findAll("li")
         expect(items).toHaveLength(1)
 
         const item = wrapper.find("li")
-
         expect(item.text()).toEqual(newItemContent)
 
     })
